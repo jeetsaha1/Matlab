@@ -1,1 +1,10 @@
+🤖
 matlab -nodesktop -nosplash -r "first"
+
+
+🤖
+input method in vs code
+1. At first take fprintf() for the prompt 
+2. Then take a input 
+
+

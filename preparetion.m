@@ -72,13 +72,14 @@
 % Write a code to find the possible no. of swapping is required for sorting
 % the element of 1D array
 
-% n = input("Enter the no. of elements: ");
+% fprintf('Enter the no. of elements: ');
+% n = input('');
 % a = zeros(n,[]);
 % for i=1:n
-%     val = sprintf("Enter the value %d: ",i);
-%     a(i) = input(val);
+%     fprintf("Enter the value %d: ",i);
+%     a(i) = input('');
 % end
-% 
+
 % % Bubble sorting
 % count = 0;
 % for i=1:n

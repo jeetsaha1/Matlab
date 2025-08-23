@@ -7,22 +7,29 @@ A = zeros(3,3);
 B = zeros(3,3);
 c = zeros(3,3);
 
-for i=1:3
+% Taking input for A
+for i = 1:3
     for j = 1:3
-        A(i,j) = input("Enter the number: ");
+        fprintf("Enter the number for A(%d,%d): ", i, j);
+        A(i,j) = input('');
     end
 end
 
-for i=1:3
+% Taking input for B
+for i = 1:3
     for j = 1:3
-        B(i,j) = input("Enter the number: ");
+        fprintf("Enter the number for B(%d,%d): ", i, j);
+        B(i,j) = input('');
     end
 end
 
-%First Part
-for i=1:3
+% First Part: Elementwise multiplication
+for i = 1:3
     for j = 1:3
-        c(i,j) = A(i,j) *B(i,j); 
+        c(i,j) = A(i,j) * B(i,j); 
     end
 end
+
+disp('Elementwise multiplication result:');
 disp(c);
+
