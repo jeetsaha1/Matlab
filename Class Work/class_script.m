@@ -52,16 +52,3 @@
 %     end
 %     fprintf("\n");
 % end
-
-n=5;
-dig =1;
-for i = 1:n
-    for j =1:i
-        fprintf(" %d ",dig);
-        dig = dig +1;
-    end
-   
-    fprintf("\n");
-end
-
-
