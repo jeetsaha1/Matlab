@@ -264,3 +264,133 @@ disp(a);
 %% 
 
 
+
+
+% Write a code to check whether a number is armstrong or not
+
+% num = input("Enter the number: ");
+% temp = num;
+% demo = num;
+% power = 0;
+% while temp ~= 0
+%     power = power +1;
+%     temp = floor(temp/10);
+% end
+% sum = 0;
+% while num ~= 0
+%     r = mod(num,10);
+%     sum = sum + r^power;
+%     num = floor(num / 10);
+% end
+% 
+% if demo == sum
+%     fprintf("The number is armstrong.");
+% else
+%     fprintf("The number is not armstrong.");
+% end
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Write a code to search ana element into an 3x3 matrix
+
+% a = zeros(3,3);
+
+% for i = 1:3
+%     for j = 1:3
+%         n = sprintf("Enter the element [%d][%d]:",i,j);
+%         a(i,j) = input(n);
+%     end
+% end
+
+% ele = input("Enter the element for searching: ");
+
+% for k = 1:3
+%     for l = 1:3
+%         if a(k,l) == ele
+%             fprintf("The element is found at index :(%d,%d)",k,l);
+%             break;
+%         end
+%     end
+% end
+
+% Write a matlab code to find the gcd of two numbers using function
+
+% function a = hcf(a,b)
+% 
+% while(b~=0)
+%     temp = b;
+%     b = mod(a,b);
+%     a = temp;
+% end
+% end
+% 
+% a = input("Enter first no.: ");
+% b = input("Enter second no: ");
+% disp(hcf(a,b));
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Write a matlab code to find the palindrome form a string
+
+% cells = input("Enter the string: ",'s');
+% str = [cells ' '];
+% n = length(str);
+% 
+% word = '';
+% rev = '';
+% i=1;
+% 
+% while i<= n
+%     if str(i) ~= ' '
+%         word = [word str(i)];
+%     else
+% 
+%         len = length(word);
+%         rev = '';
+% 
+%         for j = len:-1:1
+%             rev= [rev word(j)];
+%         end
+% 
+%         match = 1;
+%         for k = 1:len
+%             if rev(k) ~= word(k)
+%                 match =0;
+%                 break;
+%             end
+%         end
+% 
+%         if match == 1 && len >0
+%             disp(word);
+%         end
+% 
+%         word = '';
+%     end
+%     i = i+1;
+% end
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Write a matlab code to generate spiral matrix
+
+
+
+
+% Change all of the characters with their cases accordingly
+% str = input("Enter the sentence: ", 's');  % take input once
+% len = length(str);
+% 
+% for i = 1:len
+%     if str(i) >= 'a' && str(i) <= 'z'
+%         str(i) = char(str(i) - 32);   % lowercase → uppercase
+%     elseif str(i) >= 'A' && str(i) <= 'Z'
+%         str(i) = char(str(i) + 32);   % uppercase → lowercase
+%     end
+% end
+% 
+% disp(str);   % print toggled result
