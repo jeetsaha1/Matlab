@@ -52,3 +52,25 @@
 %     end
 %     fprintf("\n");
 % end
+
+
+
+% Write a matlab script to create a csv file of weekly rainfall. Read the
+% data from the csv file and plot the graph. Mention the maximum rainfall
+% in the graph
+
+% rainfall = [100; 34; 45; 120; 100; 91; 98];
+% days = {"Mon";"Tue";"Wed";"Thu";"Fri";"Sat";"Sun"};
+% t = table(days,rainfall);
+% % disp(t);
+
+% writetable(t,'Weekly rainfall.csv');
+% data = readtable('Weekly rainfall.csv');
+% figure;
+% bar(data.rainfall);
+
+% maxRainfall = max(data.rainfall);
+% text(1:length(data.rainfall), data.rainfall, num2str(data.rainfall), 'VerticalAlignment', 'bottom');
+% title(['Weekly Rainfall (Max: ' num2str(maxRainfall) ' mm)']);
+% xlabel('Days');
+% ylabel('Rainfall (mm)');
