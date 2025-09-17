@@ -12,18 +12,18 @@
 
 % Make a csv file for the inserting the data of time and temperature and plot the bar graph
 
-temp = (50:2:250);
-time = (0:1:100);
+% temp = (50:2:250);
+% time = (0:1:100);
 
-t = table(temp,time);
-writetable(t,'temp-time.csv');
+% t = table(temp,time);
+% writetable(t,'temp-time.csv');
 
-data = readtable('temp-time.csv');
+% data = readtable('temp-time.csv');
 
-figure;
-bar(temp,time);
-xlabel 'Temp';
-ylabel 'Time';
+% figure;
+% bar(temp,time);
+% xlabel 'Temp';
+% ylabel 'Time';
 
 
 
