@@ -1,4 +1,4 @@
-i% Write a code to check whether a number is armstrong or not
+% Write a code to check whether a number is armstrong or not
 
 % num = input("Enter the number: ");
 % temp = num;
