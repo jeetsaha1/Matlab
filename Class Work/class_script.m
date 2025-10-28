@@ -59,18 +59,40 @@
 % data from the csv file and plot the graph. Mention the maximum rainfall
 % in the graph
 
-% rainfall = [100; 34; 45; 120; 100; 91; 98];
-% days = {"Mon";"Tue";"Wed";"Thu";"Fri";"Sat";"Sun"};
-% t = table(days,rainfall);
-% % disp(t);
+% Write a MATLAB script to create a CSV file of weekly rainfall.
+% Read the data from the CSV file and plot the graph.
+% Mention the maximum rainfall in the graph.
 
-% writetable(t,'Weekly rainfall.csv');
-% data = readtable('Weekly rainfall.csv');
-% figure;
-% bar(data.rainfall);
+% Step 1: Create sample rainfall data
+weeks = 1:7;  % Week numbers
+rainfall = [15, 22, 30, 10, 45, 25, 35];  % Rainfall in mm
 
-% maxRainfall = max(data.rainfall);
-% text(1:length(data.rainfall), data.rainfall, num2str(data.rainfall), 'VerticalAlignment', 'bottom');
-% title(['Weekly Rainfall (Max: ' num2str(maxRainfall) ' mm)']);
-% xlabel('Days');
-% ylabel('Rainfall (mm)');
+% Step 2: Create a table and save as CSV
+T = table(weeks', rainfall', 'VariableNames', {'Week', 'Rainfall'});
+writetable(T, 'weekly_rainfall.csv');
+
+% Step 3: Read data from the CSV file
+data = readtable('weekly_rainfall.csv');
+
+% Step 4: Plot the graph
+figure;
+plot(data.Week, data.Rainfall, '-o', 'LineWidth', 2);
+xlabel('Week Number');
+ylabel('Rainfall (mm)');
+title('Weekly Rainfall Data');
+grid on;
+
+% Step 5: Find the maximum rainfall
+[maxRain, idx] = max(data.Rainfall);
+maxWeek = data.Week(idx);
+
+% Step 6: Highlight the maximum point on the graph
+hold on;
+plot(maxWeek, maxRain, 'ro', 'MarkerSize', 10, 'MarkerFaceColor', 'r');
+
+% Step 7: Annotate the maximum point
+text(maxWeek, maxRain + 2, ...
+     sprintf('Max Rainfall = %d mm (Week %d)', maxRain, maxWeek), ...
+     'HorizontalAlignment', 'center', 'FontWeight', 'bold', 'Color', 'r');
+
+hold off;
