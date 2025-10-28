@@ -163,26 +163,28 @@ disp(a);
 %         word = [word str(i)];
 %     else
 %         l = length(word);
-%         rev = '';
-%         for j = l:-1:1
-%             rev = [rev word(j)];
-%         end
-% 
-%         match = 1;
-% 
-%         for k= l:-1:1
-%             if rev(k) ~= word(k)
-%                 match = 0;
-%                 break;
-%             end
-%         end
-% 
-%         if match ==1 && l>0
-%             disp(word);
-%         end
-% 
-%         word = '';
-%     end
+%         if l>0
+    %         rev = '';
+    %         for j = l:-1:1
+    %             rev = [rev word(j)];
+    %         end
+    % 
+    %         match = 1;
+    % 
+    %         for k= l:-1:1
+    %             if rev(k) ~= word(k)
+    %                 match = 0;
+    %                 break;
+    %             end
+    %         end
+    % 
+    %         if match ==1 && l>0
+    %             disp(word);
+    %         end
+    % 
+    %         word = '';
+    %     end
+    % end
 %     i = i+1;
 % end
 % 
